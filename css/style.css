@@ -1,0 +1,131 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+.cf {
+  *zoom: 1;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar .navbar__profile ul, .navbar .navbar__menu-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 60px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-gap: 10px;
+  grid-auto-rows: 60px;
+  transition: all 0.3s;
+  background-color: #1d0e7c;
+}
+.navbar .navbar__brand {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+.navbar .navbar__brand a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 60px;
+  transition: 0.2s ease-out;
+}
+.navbar .navbar__brand a:hover {
+  letter-spacing: 3px;
+  transition: 0.2s ease-in;
+}
+.navbar .navbar__menu-list {
+  background-color: #1d0e7c;
+}
+.navbar .navbar__menu-list ul {
+  text-align: center;
+}
+.navbar .navbar__menu-list ul li {
+  display: inline-block;
+  padding: 0 30px;
+}
+.navbar .navbar__menu-list ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  position: relative;
+  letter-spacing: 2px;
+}
+.navbar .navbar__menu-list ul li a:before {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: red;
+  transition: all 0.5s;
+}
+.navbar .navbar__menu-list ul li a:hover:before {
+  width: 50%;
+  transition: all 0.5s;
+}
+.navbar .navbar__profile ul {
+  text-align: left;
+}
+.navbar .navbar__profile ul li {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.navbar .navbar__profile ul li .badge {
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  background-color: green;
+}
+.navbar .navbar__profile ul li .badge--secondary {
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+  background-color: orange;
+}
+
+/*# sourceMappingURL=style.css.map */
