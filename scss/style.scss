@@ -22,7 +22,7 @@ sans-serif;
     grid-gap: 10px;
     grid-auto-rows: 60px;
     transition: all 0.3s;
-    background-color: #1d0e7c;
+    background: transparent;
 
     .navbar__brand {
         font-family: $main-font;
@@ -46,8 +46,6 @@ sans-serif;
     }
 
     .navbar__menu-list {
-        background-color: #1d0e7c;
-
         ul {
             @extend %parent-list;
             text-align: center;
@@ -115,4 +113,24 @@ sans-serif;
             }
         }
     }
+}
+
+.content {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    line-height: 100vh;
+
+    .content__title {
+        font-family: $main-font;
+        font-size: 58px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+}
+
+.content-2 {
+    height: 100vh;
 }

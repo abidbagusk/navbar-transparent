@@ -52,7 +52,7 @@ html {
   grid-gap: 10px;
   grid-auto-rows: 60px;
   transition: all 0.3s;
-  background-color: #1d0e7c;
+  background: transparent;
 }
 .navbar .navbar__brand {
   font-family: "Rubik", sans-serif;
@@ -71,9 +71,6 @@ html {
 .navbar .navbar__brand a:hover {
   letter-spacing: 3px;
   transition: 0.2s ease-in;
-}
-.navbar .navbar__menu-list {
-  background-color: #1d0e7c;
 }
 .navbar .navbar__menu-list ul {
   text-align: center;
@@ -126,6 +123,25 @@ html {
   margin-right: 5px;
   border-radius: 2px;
   background-color: orange;
+}
+
+.content {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  line-height: 100vh;
+}
+.content .content__title {
+  font-family: "Rubik", sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.content-2 {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
